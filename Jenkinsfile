@@ -1,9 +1,6 @@
-pipeline {
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'mvn -B -DskipTests clean package' 
-            }
-        }
+node {
+    stage ('Build'){        
+        sh 'ls' 
+        sh 'mvn -B -DskipTests clean package'         
     }
 }
